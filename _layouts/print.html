@@ -4,7 +4,11 @@
   <head>
     <title></title>
     <link href="../assets/css/interface.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/css/print.css" rel="stylesheet" type="text/css" />
+    {% if page.largeprint %}
+      <link href="../assets/css/largeprint.css" rel="stylesheet" type="text/css" />
+    {% else %}
+      <link href="../assets/css/print.css" rel="stylesheet" type="text/css" />
+    {% endif %}
 
     <script src="../assets/js/pagedjs/paged.polyfill.js"></script>
 
@@ -33,7 +37,7 @@
       <div class="backing-box-legend">
         <div class="cover-legend">
           <span>
-            {{ site.data.meta.edition }}<br />
+            {{ site.data.meta.edition }}{% if page.largeprint %} (large print){% endif %}<br />
             {{ site.data.meta.when }}
           </span>
         </div>
