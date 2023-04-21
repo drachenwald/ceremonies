@@ -1,0 +1,9 @@
+---
+layout: none
+---
+{%- if jekyll.environment == "production" -%}
+
+{%- else -%}
+User-agent: *
+Disallow: /
+{%- endif -%}

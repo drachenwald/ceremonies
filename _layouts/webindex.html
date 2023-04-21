@@ -1,0 +1,45 @@
+{% include header.html %}
+
+<div id="main" class="wrapper style3">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-12">
+				<section id="content">
+
+          {{ content }}
+    
+          <div class="text-center mb-4">
+            <a class="btn btn-primary m-3 shadow" href="/print/"><i class="fa-solid fa-print"></i> Printable version</a>
+            <a class="btn btn-primary m-3 shadow" href="/ceremonies.pdf"><i class="fa-solid fa-book"></i> Download PDF</a>
+          </div>
+
+          <div class="row">
+
+            <div class="col-0 col-md-1 col-lg-2"><br /></div>
+
+            <div class="col-12 col-md-10 col-lg-8">
+
+              <div class="list-group shadow">
+                {% for chapter in site.ceremonies %}
+                  <a href="{{chapter.url}}" class="list-group-item list-group-item-action px-3 py-4">
+                    <h4>{{ chapter.title }}</h4>
+                  </a>
+                {% endfor %}
+              </div>
+
+            </div>
+            
+            <div class="col-0 col-md-1 col-lg-2"><br /></div>
+
+          </div>
+          
+				</section>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+{% include footer.html %}
+

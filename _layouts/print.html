@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title></title>
+    <link href="../assets/css/interface.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/print.css" rel="stylesheet" type="text/css" />
+
+    <script src="../assets/js/pagedjs/paged.polyfill.js"></script>
+
+    <style>
+      @page:first {
+        background-image: url('');
+        background-size: cover;
+        bleed: 10mm;
+      }
+    </style>
+
+    <meta name="robots" content="noindex">
+
+  </head>
+
+  <body>
+
+    <section class="chapter" id="front-cover">
+      <div class="backing-box">
+        <div class="masthead">
+          Kingdom of Drachenwald<br />
+          Book of Ceremonies
+        </div>
+      </div>
+      <img src="/assets/img/heraldry.svg">
+      <div class="backing-box-legend">
+        <div class="cover-legend">
+          <span>
+            {{ site.data.meta.edition }}<br />
+            {{ site.data.meta.when }}
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="table-of-contents">
+      <h1>Table of contents</h1>
+
+      <nav id="list-toc-generated">
+        <ul>
+          {% for chapter in site.ceremonies %}
+            {% assign fragment = chapter.title | slice: 0,4 %}
+            {% if fragment == "Part" %}
+              <li><span href="#c-{{ chapter.slug }}"><strong>{{ chapter.title }}</strong></span></li>
+            {% else %}
+              <li><span href="#c-{{ chapter.slug }}">{{ chapter.title }}</span></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+
+    {% for chapter in site.ceremonies %}
+
+      <section class="chapter">
+        <h1 id="c-{{ chapter.slug }}">{{ chapter.title }}</h1>
+
+        {{ chapter.content | markdownify }}
+      </section>
+
+    {% endfor %}
+
+  </body>
+
+</html>

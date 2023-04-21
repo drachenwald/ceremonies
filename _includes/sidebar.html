@@ -1,0 +1,12 @@
+<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+  {% for chapter in site.ceremonies %}
+  <a class="btn btn--primary nav-link {% if chapter.url == page.url %}active shadow{% endif %}" type="button"
+  {% if chapter.url == page.url %}aria-selected="true"{% else %}aria-selected="false"{% endif %}
+  href="{{ chapter.url }}"
+  role="tab">
+  {{ chapter.title }}
+</a>
+  {% endfor %}
+
+</div>
