@@ -60,6 +60,16 @@
         </ul>
       </nav>
 
+      <hr />
+
+      <p>
+      Build:
+      <span style="font-family: monospace;">{{ site.data.meta.commit | slice: 0,7 }}</span>
+      {{ site.data.meta.buildtime }}
+      </p>
+
+    </section>
+
     {% for chapter in site.ceremonies %}
 
       <section class="chapter">
