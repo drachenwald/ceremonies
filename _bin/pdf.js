@@ -35,6 +35,20 @@ async function pdfify() {
               browser.close();
             })
 
+    await page
+        .goto(`http://localhost:3000/largeprint/`, { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
+
+    console.log('waiting a little longer')
+
+    await new Promise(resolve => setTimeout(resolve, 10000));
+
+    await page.pdf({ path: '_site/ceremonies-largeprint.pdf', format: 'A4' })
+            .then(function (res) {
+              browser.close();
+            }).catch(function (e) {
+              browser.close();
+            })
+    
 
     console.log('success!')
     server.close(() => {
