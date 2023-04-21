@@ -22,13 +22,13 @@ async function pdfify() {
         .on('requestfailed', request => console.log(`${request.failure().errorText} ${request.url()}`))
 
     await page
-        .goto(`http://localhost:3000/print/`, { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
+        .goto(`http://localhost:3000/largeprint/`, { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
 
     console.log('waiting a little longer')
 
     await new Promise(resolve => setTimeout(resolve, 10000));
 
-    await page.pdf({ path: '_site/ceremonies.pdf', format: 'A4' })
+    await page.pdf({ path: '_site/ceremonies-largeprint.pdf', format: 'A4' })
             .then(function (res) {
               browser.close();
             }).catch(function (e) {
