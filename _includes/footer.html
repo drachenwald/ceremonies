@@ -7,8 +7,6 @@
         <div class="container">
 					<div class="row">
 						<div class="col align-middle">
-
-							
 							<ul>
 								<li><a class="text-reset" href="http://drachenwald.sca.org/forms">Forms</a></li>
 								<li><a class="text-reset" href="https://datastudio.google.com/u/0/reporting/34b2fab2-6092-4574-a11d-f4dfa9adc415/page/lVXNC">Find an officer</a></li>
@@ -27,6 +25,14 @@
 						Copyright on all content and images remains with the creators.  
 						The main SCA website can be found at <a class="text-reset" href="https://www.sca.org/">https://www.sca.org/</a>.
 						
+						</div>
+
+						<div class="row">
+							<div class="col">
+							Build
+							<span style="font-family: monospace;">{{ site.data.meta.commit | slice: 0,7 }}</span>
+							{{ site.data.meta.buildtime }}
+						</col>
 						</div>
 
 
