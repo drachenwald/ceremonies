@@ -17,14 +17,19 @@
 
           <div class="row">
 
-            <div class="col-0 col-md-1 col-lg-2"><br /></div>
+            <div class="col-0 col-sm-1 col-md-2 col-lg-3"><br /></div>
 
-            <div class="col-12 col-md-10 col-lg-8">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
 
               <div class="list-group shadow">
                 {% for chapter in site.ceremonies %}
-                  <a href="{{chapter.url}}" class="list-group-item list-group-item-action px-3 py-4">
-                    <h4>{{ chapter.title }}</h4>
+                  <a href="{{chapter.url}}" class="list-group-item list-group-item-action">
+                    {% capture fragment %}{{ chapter.title | slice:0,5 }}{% endcapture %}
+                    {% if fragment == "Part " %}
+                      <strong>{{ chapter.title }}</strong>
+                    {% else %}
+                      {{ chapter.title }}
+                    {% endif %}
                   </a>
                 {% endfor %}
               </div>

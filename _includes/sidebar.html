@@ -1,7 +1,7 @@
-<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+<ul class="list-group shadow">
 
   {% for chapter in site.ceremonies %}
-  <a class="btn btn--primary nav-link {% if chapter.url == page.url %}active shadow{% endif %}" type="button"
+  <a class="list-group-item list-group-action {% if chapter.url == page.url %}active{% endif %}"
   {% if chapter.url == page.url %}aria-selected="true"{% else %}aria-selected="false"{% endif %}
   href="{{ chapter.url }}"
   role="tab">
@@ -9,4 +9,4 @@
 </a>
   {% endfor %}
 
-</div>
+</ul>

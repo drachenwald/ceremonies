@@ -2,19 +2,17 @@
 			</div>
 
 
-			<nav id="footer" class="navbar navbar-expand-lg bg-primary " style="color: #ffff00">
+			<div id="footer" class="bg-primary " style="color: #ffff00">
 
-        <div class="container">
-					<div class="row">
-						<div class="col align-middle">
-							<ul>
-								<li><a class="text-reset" href="http://drachenwald.sca.org/forms">Forms</a></li>
-								<li><a class="text-reset" href="https://datastudio.google.com/u/0/reporting/34b2fab2-6092-4574-a11d-f4dfa9adc415/page/lVXNC">Find an officer</a></li>
-								<li><a class="text-reset" href="http://drachenwald.sca.org/forms">Update Contact Information</a></li>
-							</ul>
+				<div class="container">
+
+						<div class="align-middle pt-4 pb-2">
+								<a class="text-reset me-4" href="http://drachenwald.sca.org/forms">Forms</a>
+								<a class="text-reset me-4" href="https://datastudio.google.com/u/0/reporting/34b2fab2-6092-4574-a11d-f4dfa9adc415/page/lVXNC">Find an officer</a>
+								<a class="text-reset me-4" href="http://drachenwald.sca.org/forms">Update Contact Information</a>
 						</div>
 						
-						<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} Drachenwald.
+						<div class="page__footer-copyright py-2">&copy; {{ site.time | date: '%Y' }} Drachenwald.
 							
 						{% if jekyll.environment == "production" %}
 						This is the recognised web site for the Kingdom of Drachenwald in the Society for Creative Anachronism.
@@ -24,23 +22,15 @@
 						<br />
 						Copyright on all content and images remains with the creators.  
 						The main SCA website can be found at <a class="text-reset" href="https://www.sca.org/">https://www.sca.org/</a>.
-						
 						</div>
 
-						<div class="row">
-							<div class="col">
+						<div class="pt-2 pb-4">
 							Build
 							<span style="font-family: monospace;">{{ site.data.meta.commit | slice: 0,7 }}</span>
 							{{ site.data.meta.buildtime }}
-						</col>
 						</div>
-
-
-					</div>
-
-        </div>
-
-      </nav>
+				</div>
+			</div>
 
 	</body>
 </html>
