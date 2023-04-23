@@ -14,70 +14,74 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row text-center">
 
-      <div class="col-0 col-md-1 col-xl-2"><br /></div>
-
-      <div class="col-sm-6 col-md-5 col-xl-4 mb-3 mb-sm-0">
-        <div class="card shadow">
-          <div class="card-body text-center">
-            <h4 class="card-title mb-3">Regular print</h4>
-            <div class="btn-group-vertical shadow">
-              <a class="btn btn-outline-primary" href="/print/"><i class="fa-solid fa-print"></i> Printable version</a>
-              <a class="btn btn-outline-primary" href="/ceremonies.pdf"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>  
-            </div>
-          </div>
-        </div>
+      <div class="col-0 col-lg-1 col-xl-2">
       </div>
 
-      <div class="col-sm-6 col-md-5 col-xl-4 mb-3 mb-sm-0">
-        <div class="card shadow">
-          <div class="card-body text-center">
-            <h4 class="card-title mb-3">Large print</h4>
-            <div class="btn-group-vertical shadow">
-              <a class="btn btn-outline-primary" href="/largeprint/"><i class="fa-solid fa-print"></i> Printable version</a>
-              <a class="btn btn-outline-primary" href="/ceremonies-largeprint.pdf"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>  
+      <div class="col-12 col-lg-10 col-xl-8">
+        <div class="card-group">
+
+          <div class="card shadow">
+            <div class="card-body">
+              <h4 class="card-title mb-3">Regular print</h4>
+              <div class="btn-group-vertical shadow">
+                <a class="btn btn-outline-primary" href="/print/"><i class="fa-solid fa-print"></i> Printable version</a>
+                <a class="btn btn-outline-primary" href="/ceremonies.pdf"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>  
+              </div>
             </div>
           </div>
+    
+          <div class="card shadow">
+            <div class="card-body text-center">
+              <h4 class="card-title mb-3">Large print</h4>
+              <div class="btn-group-vertical shadow">
+                <a class="btn btn-outline-primary" href="/largeprint/"><i class="fa-solid fa-print"></i> Printable version</a>
+                <a class="btn btn-outline-primary" href="/ceremonies-largeprint.pdf"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>  
+              </div>
+            </div>
+          </div>
+
         </div>
+    
       </div>
 
-      <div class="col-0 col-md-1 col-xl-2"><br /></div>
+      <div class="col-0 col-lg-1 col-xl-2">
+      </div>
 
     </div>
+
+
     
-          <div class="text-center mb-4">
-          </div>
+    <div class="row mt-0 mt-sm-4">
 
-          <div class="row">
+      <div class="col-0 col-sm-1 col-md-2 col-lg-3"><br /></div>
 
-            <div class="col-0 col-sm-1 col-md-2 col-lg-3"><br /></div>
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6">
 
-            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+        <h3 class="text-center mb-3">
+          Chapters
+        </h3>
 
-              <div class="list-group shadow">
-                {% for chapter in site.ceremonies %}
-                  <a href="{{chapter.url}}" class="list-group-item list-group-item-action">
-                    {% capture fragment %}{{ chapter.title | slice:0,5 }}{% endcapture %}
-                    {% if fragment == "Part " %}
-                      <strong>{{ chapter.title }}</strong>
-                    {% else %}
-                      {{ chapter.title }}
-                    {% endif %}
-                  </a>
-                {% endfor %}
-              </div>
+        <div class="list-group shadow">
+          {% for chapter in site.ceremonies %}
+            <a href="{{chapter.url}}" class="list-group-item list-group-item-action">
+              {% capture fragment %}{{ chapter.title | slice:0,5 }}{% endcapture %}
+              {% if fragment == "Part " %}
+                <strong>{{ chapter.title }}</strong>
+              {% else %}
+                {{ chapter.title }}
+              {% endif %}
+            </a>
+          {% endfor %}
+        </div>
 
-            </div>
-            
-            <div class="col-0 col-md-1 col-lg-2"><br /></div>
+      </div>
+      
+      <div class="col-0 col-md-1 col-lg-2"><br /></div>
 
-          </div>
+    </div>
           
-				</section>
-			</div>
-
-		</div>
 	</div>
 </div>
 
