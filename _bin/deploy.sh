@@ -12,7 +12,8 @@ then
   if [ "$GITHUB_REF_NAME" == "main" ]
   then
     echo "Deploying main site"
-    rsync -rvzc --delete -e 'ssh -p 45333' public/ $WEBHOST_OVH:ceremonies/public/
+    rsync -rvzc --exclude '.htaccess' --delete -e 'ssh -p 45333' public/ $WEBHOST_OVH:ceremonies/public/
+    rsync -rvzc --delete -e 'ssh -p 45333' public/.htaccess $WEBHOST_OVH:ceremonies/
   else
     echo "No branch specified"
   fi

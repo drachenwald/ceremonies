@@ -1,0 +1,15 @@
+---
+layout: none
+---
+
+Options -Indexes
+
+AddDefaultCharset utf-8
+AddCharset utf-8 .xml
+
+RewriteEngine On
+RewriteCond %{ENV:HTTPS} !on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://drachenwald.sca.org%{REQUEST_URI} [L,NE,R=301]
+
+ErrorDocument 404 /404.html
