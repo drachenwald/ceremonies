@@ -8,3 +8,6 @@ bundle exec jekyll build
 npm install
 node _bin/pdf.js
 node _bin/pdf-largeprint.js
+pwd
+ls
+
