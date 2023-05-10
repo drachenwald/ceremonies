@@ -58,6 +58,7 @@ exclude:
 
 include:
   - _redirects
+  - .htaccess
 
 sass:
   sass_dir: assets/css
