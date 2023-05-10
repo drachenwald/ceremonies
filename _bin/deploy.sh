@@ -11,8 +11,7 @@ if [ -n $GITHUB_REF_NAME ]
 then
   if [ "$GITHUB_REF_NAME" == "main" ]
   then
-    echo "Building main site"
-    JEKYLL_ENV=production bundle exec jekyll build -d public
+    echo "Deploying main site"
     rsync -rvzc --delete -e 'ssh -p 45333' public/ $WEBHOST_OVH:ceremonies/public/
   else
     echo "No branch specified"

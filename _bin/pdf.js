@@ -28,7 +28,7 @@ async function pdfify() {
 
     await new Promise(resolve => setTimeout(resolve, 10000));
 
-    await page.pdf({ path: '_site/ceremonies.pdf', format: 'A4' })
+    await page.pdf({ path: 'public/ceremonies.pdf', format: 'A4' })
             .then(function (res) {
               browser.close();
             }).catch(function (e) {
