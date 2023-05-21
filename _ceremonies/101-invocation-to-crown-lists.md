@@ -23,7 +23,7 @@ Entrants
 : It is.
 
 Consort
-: Do each of you, entrant and consort, now affirm that you, fulfil all the qualifications for fighting today as set forth by our laws?
+: Do each of you, entrant and consort, now affirm that you fulfil all the qualifications for fighting today as set forth by our laws?
 
 Entrants and Consorts
 : I do.
