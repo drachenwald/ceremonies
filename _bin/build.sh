@@ -7,3 +7,6 @@ echo '"' >> _data/meta.yaml
 JEKYLL_ENV=production bundle exec jekyll build -d public
 node _bin/pdf.js
 node _bin/pdf-largeprint.js
+
+pwd
+ls -la
