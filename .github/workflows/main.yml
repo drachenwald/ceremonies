@@ -26,6 +26,9 @@ jobs:
         LANG: "en_US.UTF-8"
         LANGUAGE: "en_US.UTF-8" 
       run: _bin/build.sh
+    - uses: docker://pandoc/core:2.17.1.1
+      with:
+        args: -f html -t docx -o ceremonies.docx print/index.html
     - name: Deploy site
       env:
         SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
