@@ -28,7 +28,7 @@ jobs:
       run: _bin/build.sh
     - uses: docker://pandoc/core:2.17.1.1
       with:
-        args: -f html -t docx -o ${{ inputs.working_directory }}/ceremonies.docx ${{ inputs.working_directory }}/print/index.html
+        args: -f html -t docx -o public/print/ceremonies.docx public/print/index.html
     - name: Deploy site
       env:
         SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
