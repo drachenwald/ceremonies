@@ -1,4 +1,3 @@
-version: '3'
 services:
   ceremonies:
     image: ruby:3.3
