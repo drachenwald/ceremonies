@@ -92,7 +92,7 @@ _Pause_
 
 Their Majesties command the presence of all members of the Order of the Rose.
 
-_	Members of the order come forward and kneel._
+_Members of the order come forward and kneel._
 
 Herald
 : A rose is a glorious flower, worthy of all admiration, yet underneath all its elegance it has fierce thorns to defend itself. Similarly, a Consort inspires their subjects to noble deeds and fosters hospitality but will, when necessary, defend their realm and subjects with all their might.
@@ -100,7 +100,7 @@ Herald
 Consort
 : ____________ , having ruled this Kingdom as its [King / Queen / Alt Title], we confirm you as a Companion of the Rose.
 
-_	The Consort gives a rose or a similar token._
+_The Consort gives a rose or a similar token._
 
 Sovereign
 : Let the new Companion of the Rose be vested as befits their rank.
@@ -110,4 +110,4 @@ _Two members of the order place a cloak of the order around the new member’s s
 Herald
 : For the new Companion of the Rose, ____________ , Vivat! Vivat! Vivat!
 
-_	The order departs._
+_The order departs._
