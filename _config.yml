@@ -43,6 +43,7 @@ plugins:
 exclude:
   - .sass-cache/
   - .jekyll-cache/
+  - .ruby-version
   - gemfiles/
   - Gemfile
   - Gemfile.lock
